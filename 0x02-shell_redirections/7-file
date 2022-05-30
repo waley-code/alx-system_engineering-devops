@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "Best School\n" | cat > '\*\\'\''"Holberton School"\'\''\\*$\?\*\*\*\*\*:)'
+printf "Best School\n" | cat > '\*\\'\''"Best School"\'\''\\*$\?\*\*\*\*\*:)'
