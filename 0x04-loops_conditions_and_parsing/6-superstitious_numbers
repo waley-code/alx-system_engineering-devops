@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # a Bash script that displays numbers from 1 to 20 and
+
 j=1
 while [ $j -le 20 ]
 do

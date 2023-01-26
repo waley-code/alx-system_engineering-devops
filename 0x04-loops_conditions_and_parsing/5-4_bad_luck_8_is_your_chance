@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School" 8 times & bad luck or good luck
+
 j=1
 while [ $j -le 10 ]
 do
