@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # vWhere only the part of the name after the first dash is displayed
-presendDir=$(pwd)
-list=$(ls "$presendDir")
-for i in $list;
+for i in *;
 do 
     name_after_dash=$(echo "$i" | cut -d'-' -f2)
     echo "$name_after_dash"
