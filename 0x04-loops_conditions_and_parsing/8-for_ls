@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# vWhere only the part of the name after the first dash is displayed
+for i in $(ls)
+do 
+    name_after_dash=$(echo $i | cut -d'-' -f2-)
+    echo $name_after_dash
+done
