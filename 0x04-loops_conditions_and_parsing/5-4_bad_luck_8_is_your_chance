@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 8 times & bad luck or good luck
+j=0
+for i in {1..10}
+do
+    if [ "$i" == 4 ]; then
+        echo "bad luck"
+    elif [ "$i" == 8 ]; then
+        echo "good luck"
+    else
+        echo "Best School"
+    j=$((j+1))
+    fi
+done
+j=0
