@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 # a Bash script that gives you information about the school file.
 file_search="school"
-
 if [ -e "$file_search" ]
 then
-
     echo "school file exists"
 
     if [ -f "$file_search" ]
