@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
-# A Bash script that displays the content of the file /etc/passwd.
+# Tell the story of a passwd
 
-passwd_file=$(cat /etc/passwd)
-while IFS=':' read -ra arr; do
-    username=${arr[0]}
-    user_id=${arr[2]}
-    home_directory=${arr[5]}
-    echo "$username:$user_id:$home_directory"
-done <<< "$passwd_file"
+while IFS=':' read -r f1 f2 f3 f4 f5 f6 f7; do
+    echo "The user $f1 is part of the $f4 gang, lives in $f6 and rides $f7. $f3's place is protected by the passcode $f2, more info about the user here: $f5"
+done < /etc/passwd
