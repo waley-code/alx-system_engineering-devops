@@ -1,8 +1,7 @@
 # Simple web stack
 
 <img src="0-simple_web_stack.png" alt="Simple web stack image">
-    <a href="
-    https://drive.google.com/file/d/1bMPvFaGy-S5JMhupKrd4SZyKElOSW9RC/view?usp=sharing">See Image</a>
+
 ## About
 First, let's start with a user wanting to access the website hosted on this infrastructure. When a user types www.foobar.com in their web browser, their computer sends a request to the domain name system (DNS) server to resolve the domain name into an IP address. The DNS server then returns the IP address of the server that is hosting the website.
 
