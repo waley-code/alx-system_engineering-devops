@@ -1,6 +1,6 @@
 #  Secured and monitored web infrastructure
 
-<img src="2-secured_and_monitored_web_infrastructure" alt="Secured and monitored web infrastructure image">
+<img src="2-secured_and_monitored_web_infrastructure.png" alt="Secured and monitored web infrastructure image">
 
 A three server web infrastructure that hosts the website www.foobar.com, is secured, serves encrypted traffic, and is monitored, we will add:
 
