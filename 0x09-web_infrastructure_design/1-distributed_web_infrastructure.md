@@ -1,6 +1,6 @@
 # Distributed web infrastructure
 
-<img src="0-simple_web_stack.png" alt="Simple web stack image">
+<img src="1-distributed_web_infrastructure.png" alt="Simple web stack image">
 
 A three-server web infrastructure that hosts the website www.foobar.com, we would need to add two servers to the existing setup. The following are the details of the infrastructure:
 
