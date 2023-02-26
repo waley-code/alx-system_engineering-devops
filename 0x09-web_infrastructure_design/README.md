@@ -11,9 +11,9 @@ For this project, I am expected to know these concepts:
 - Load balancer
 - Server
 
-<img src="0-simple_web_stack.png" alt="Simple web stack image">
-<img src="1-distributed_web_infrastructure.png" alt="distributed web infrastructure image">
 <img src="2-secured_and_monitored_web_infrastructure.png" alt="Secured and monitored web infrastructure image">
+<img src="1-distributed_web_infrastructure.png" alt="distributed web infrastructure image">
+<img src="0-simple_web_stack.png" alt="Simple web stack image">
 
 # Simple web stack
 
