@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 # an SSH configuration file for SSH client
 Host *
     Hostname 54.174.243.255

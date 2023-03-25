@@ -4,7 +4,7 @@ file { '~/.ssh/config':
   ensure  => file,
   owner   => 'uduntu',
   group   => 'ubuntu',
-  mode    => '600',
+  mode    => '0600',
   content => "\
 Host *
   Hostname 54.174.243.255
