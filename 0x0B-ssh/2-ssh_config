@@ -1,4 +1,5 @@
-Host *
+Host 54.174.243.255
+    Hostname 54.174.243.255
     IgnoreUnkown AddKeysToAgent,UseKeychain
     UseKeychain yes
     AddKeysToAgent yes
