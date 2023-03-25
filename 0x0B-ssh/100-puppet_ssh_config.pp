@@ -9,6 +9,7 @@ file { '~/.ssh/config':
 Host *
   Hostname 54.174.243.255
   User ubuntu
+  IdentityFile ~/.ssh/id_rsa
   IdentityFile ~/.ssh/school
   PasswordAuthentication no"
 }
