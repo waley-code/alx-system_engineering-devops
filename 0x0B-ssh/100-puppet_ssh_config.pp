@@ -1,14 +1,16 @@
 # Puppet to make changes to our configuration file
-file { '~/.ssh/config':
+file { '/home/user/.ssh/config':
   ensure  => file,
+  owner   => 'user',
+  group   => 'user',
   mode    => '0600',
   content => "\
-Host 54.174.243.255
-    Hostname 54.174.243.255
-    IgnoreUnkown AddKeysToAgent,UseKeychain
-    UseKeychain yes
-    AddKeysToAgent yes
-    IdentityFile ~/.ssh/school
-    IdentityFile ~/.ssh/id_rsa
-    PasswordAuthentication no"
+Host <server_ip>
+  IdentityFile /home/user/.ssh/school
+  IdentityFile /home/user/.ssh/id_rsa
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  ForwardAgent yes
+"
 }
