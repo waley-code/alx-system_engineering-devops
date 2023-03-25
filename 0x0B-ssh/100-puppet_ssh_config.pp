@@ -6,7 +6,7 @@ file { '~/.ssh/config':
   group   => 'ubuntu',
   mode    => '0600',
   content => "\
-Host *
+Host 54.174.243.255
   Hostname 54.174.243.255
   User ubuntu
   IdentityFile ~/.ssh/id_rsa
