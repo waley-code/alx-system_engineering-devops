@@ -6,7 +6,7 @@ file { '~/.ssh/config':
   group   => 'ubuntu',
   mode    => '600',
   content => "\
-Host 54.174.243.255
+Host *
   Hostname 54.174.243.255
   User ubuntu
   IdentityFile ~/.ssh/school
