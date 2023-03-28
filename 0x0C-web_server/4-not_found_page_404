@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
-# Script that configures a new Ubuntu machine to respect above requirements
+# Script that configures a new Ubuntu machine to requirements
 
 sudo apt-get update
 sudo apt-get install -y nginx
 
 echo "Hello World!" | sudo tee /var/www/html/index.html
-echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/404.html
+echo "Ceci n'est pas une page" \
+  | sudo tee /usr/share/nginx/html/404.html
 sudo sed -i "s/server_name _;/server_name _;\n\
-\trewrite ^\/redirect_me https:\/\/github.com\/waley-code permanent;\n\
+\trewrite ^\
+\/redirect_me https:\/\/github.com\/waley-code permanent;\n\
 \n\
 \terror_page 404 \/404.html;\n\
 \tlocation = \/404.html {\n\
