@@ -7,18 +7,16 @@ if [ $# -ne 4 ]; then
 fi
 
 # Assign input arguments to variables
-local_file_path=$1
-server_ip=$2
-username=$3
-ssh_key_path=$4
+pth=$1
+ipd=$2
+usrn=$3
+keyPth=$4
 
 # Check if the file exists
-if [ ! -f $local_file_path ]; then
-  echo "Error: $local_file_path not found"
+if [ ! -f $pth ]; then
+  echo "Error: $pth not found"
   exit 1
 fi
 
 # Transfer the file to the server
-scp -o StrictHostKeyChecking=no -i $ssh_key_path $local_file_path $username@$server_ip:~
-
-# echo "File transferred successfully to $username@$server_ip:~/"
+scp -o StrictHostKeyChecking=no -i $keyPth $pth $usrn@$ipd:~
