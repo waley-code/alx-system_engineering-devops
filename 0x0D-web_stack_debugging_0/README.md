@@ -22,6 +22,7 @@ Example:
 	vagrant@vagrant:~$
 Here we can see that after starting my Docker container, I curl the port 8080 mapped to the Docker container port 80, it does not return a page but an error message.
 After connecting to the container and fixing the apache server by starting it, you can see that curling port 80 return a page that contains Hello Holberton below
+	
 	vagrant@vagrant:~$ curl 0:8080
 	Hello Holberton
 	vagrant@vagrant:~$
