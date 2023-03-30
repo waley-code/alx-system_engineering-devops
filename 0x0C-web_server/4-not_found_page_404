@@ -17,3 +17,4 @@ sudo sed -i "s/server_name _;/server_name _;\n\
 \t\tinternal;\n\
 \t}/" /etc/nginx/sites-available/default
 sudo service nginx restart
+

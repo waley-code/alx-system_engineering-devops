@@ -11,3 +11,4 @@ https:\/\/github.com\/waley-code permanent;"
 sudo sed -i "s/server_name _;/$new_string/" \
     /etc/nginx/sites-enabled/default
 sudo service nginx restart
+
