@@ -1,51 +1,6 @@
-class nginx_server {
-  package { 'nginx':
-    ensure => installed,
-  }
+# Installs a Nginx server
 
-  file { '/var/www/html/index.html':
-    content => 'Hello World!',
-  }
-
-  file { '/etc/nginx/sites-available/default':
-    content => template('nginx_server/default.erb'),
-  }
-
-  file { '/etc/nginx/sites-enabled/default':
-    ensure  => 'link',
-    target  => '/etc/nginx/sites-available/default',
-    require => File['/etc/nginx/sites-available/default'],
-  }
-
-  file { '/usr/share/nginx/html/404.html':
-    content => 'Ceci n\'est pas une page',
-  }
-
-  file { '/etc/nginx/nginx.conf':
-    content => template('nginx_server/nginx.conf.erb'),
-    notify  => Service['nginx'],
-  }
-
-  service { 'nginx':
-    ensure    => running,
-    enable    => true,
-    subscribe => [
-      File['/etc/nginx/sites-available/default'],
-      File['/etc/nginx/nginx.conf'],
-    ],
-  }
-}
-
-class { 'nginx_server': }
-
-# Redirect /redirect_me to GitHub
-nginx::resource::server { 'default':
-  listen_port => 80,
-  server_name => '_',
-  rewrite     => [
-    '^/redirect_me https://github.com/waley-code permanent',
-  ],
-  error_pages => {
-    '404' => '/404.html',
-  },
+exec {'install':
+  provider => shell,
+  command  => 'sudo apt-get -y update ; sudo apt-get -y install nginx ; echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html ; sudo sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/luischaparroc permanent;/" /etc/nginx/sites-available/default ; sudo service nginx start',
 }
