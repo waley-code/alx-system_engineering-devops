@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#remove folder for enabled sites
+rm /etc/nginx/sites-enabled/default;
+# Create a symbolic link in sites-available folder
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default;
+# Restarting the Nginx service
+service nginx restart;
