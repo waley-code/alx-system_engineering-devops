@@ -3,5 +3,5 @@
 rm /etc/nginx/sites-enabled/default;
 # Create a symbolic link in sites-available folder
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default;
-# Restarting the Nginx service
+# Restarting the Nginx servic
 service nginx restart;
