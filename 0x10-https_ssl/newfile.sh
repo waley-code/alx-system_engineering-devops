@@ -26,23 +26,23 @@ frontend www-http
         redirect scheme https if !{ ssl_fc }
 
 frontend www-https
-        bind *:443 ssl crt /etc/letsencrypt/live/www.example.com/fullchain.pem
+        bind *:443 ssl crt /etc/letsencrypt/live/www.waleadeosun.net/fullchain.pem
         http-request redirect scheme https unless { ssl_fc }
         default_backend www-backend
 
 backend www-backend
         balance roundrobin
-        server web-01 192.168.0.101:80 check
-        server web-02 192.168.0.102:80 check
+        server web-01 54.174.243.255 check
+        server web-02 54.208.245.251 check
 EOF'
 
 # Install certbot and obtain SSL certificate for the domain
 sudo apt-get update
 sudo apt-get install certbot
-sudo certbot certonly --standalone --agree-tos --email you@example.com -d www.example.com
+sudo certbot certonly --standalone --agree-tos --email walephlp@gmail.com -d www.waleadeosun.net
 
 # Update HAproxy configuration to use the SSL certificate
-sudo sed -i "s#/etc/letsencrypt/live/www.example.com/fullchain.pem#/etc/letsencrypt/live/www.example.com/fullchain.pem\n    ssl crt /etc/letsencrypt/live/www.example.com/privkey.pem#g" /etc/haproxy/haproxy.cfg
+sudo sed -i "s#/etc/letsencrypt/live/www.waleadeosun.net/fullchain.pem#/etc/letsencrypt/live/www.waleadeosun.net/fullchain.pem\n    ssl crt /etc/letsencrypt/live/www.waleadeosun.net/privkey.pem#g" /etc/haproxy/haproxy.cfg
 
 # Restart HAproxy
 sudo service haproxy restart
