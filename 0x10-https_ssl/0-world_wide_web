@@ -8,7 +8,6 @@ print_info () {
     record_type=$(dig $subdomain.$domain +short | awk '{print $1}')
     echo "The subdomain $subdomain is a $record_type record and points to $record"
 }
-
 if [ "$#" -eq 2 ]
 then
     print_info $2 $1
