@@ -8,7 +8,6 @@ COMPRESSED_ARCHIVE="$DATE.tar.gz"
 
 # Set the MySQL root user password
 MYSQL_ROOT_PASSWORD=$1
-
 # Create the MySQL dump and compress it into the archive
 mysqldump --all-databases -u root -p$MYSQL_ROOT_PASSWORD > $MYSQL_DUMP_FILE
 tar -czvf $COMPRESSED_ARCHIVE $MYSQL_DUMP_FILE
