@@ -11,7 +11,8 @@ def funct():
     """Displays tasks based on id argument from scriot"""
 
     Id_us = 'https://jsonplaceholder.typicode.com/users/{}'.format(sys.argv[1])
-    Id_td = 'https://jsonplaceholder.typicode.com/todos/?userId={}'.format(sys.argv[1])
+    Id_td = 'https://jsonplaceholder.typicode.com/todos/?userId={}'\
+            .format(sys.argv[1])
     user_name = requests.get(Id_us).json().get('name')
     request_todo = requests.get(Id_td).json()
     tasks = []

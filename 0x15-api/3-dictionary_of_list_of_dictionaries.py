@@ -30,7 +30,6 @@ def funct():
     with open('todo_all_employees.json', 'w+') as file:
         file.write(json.dumps(info))
 
-     
 
 if __name__ == "__main__":
     funct()
