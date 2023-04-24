@@ -4,16 +4,15 @@
     about his/her todo list progress.
 """
 import requests
-import sys
 import json
 
 
 def funct():
     """Displays tasks based on id argument from scriot"""
-
     Id_us = 'https://jsonplaceholder.typicode.com/users'
     users = requests.get(Id_us).json()
     info = {}
+
     for user in users:
         user_id = user.get('id')
         name = user.get('username')

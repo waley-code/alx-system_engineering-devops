@@ -15,6 +15,7 @@ def funct():
             .format(sys.argv[1])
     Id_td = 'https://jsonplaceholder.typicode.com/todos/?userId={}'\
             .format(sys.argv[1])
+    uId = sys.argv[1]
     user_name = requests.get(Id_us).json().get('username')
     req_todo = requests.get(Id_td).json()
     texts = []
@@ -25,11 +26,10 @@ def funct():
                     "completed": todo.get("completed"),
                     "username": user_name}
             texts.append(text)
-        paxx = {Id_us: texts}
-
+        paxx = {uId: texts}
         file.write(json.dumps(paxx))
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
+    if len(sys.argv) == 2:
         funct()
