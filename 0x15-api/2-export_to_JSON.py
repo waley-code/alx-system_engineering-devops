@@ -3,9 +3,9 @@
     Given employee ID, returns information
     about his/her todo list progress.
 """
+import json
 import requests
 import sys
-import json
 
 
 def funct():
