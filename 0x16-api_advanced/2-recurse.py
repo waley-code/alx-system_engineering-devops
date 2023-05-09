@@ -13,7 +13,7 @@ def recurse(subreddit, hot_list=[], after=None):
     """
 
     # Set the API endpoint URL and headers
-    url = f"https://www.reddit.com/r/{subreddit}/hot.json"
+    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
 
     # Add the after parameter to the URL if it exists
