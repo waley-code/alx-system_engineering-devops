@@ -18,7 +18,7 @@ def recurse(subreddit, hot_list=[], after=None):
 
     # Add the after parameter to the URL if it exists
     if after:
-        url += f"?after={after}"
+        url += "?after={}".format(after)
 
         # Send a GET request to the API endpoint
     response = requests.get(url, headers=headers, allow_redirects=False)
