@@ -14,7 +14,7 @@ def recurse(subreddit, hot_list=[], after=None):
     url = f"https://www.reddit.com/r/{subreddit}/hot.json"
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
 
-    # Add the 'after' parameter to the URL if it exists
+    # Add the after parameter to the URL if it exists
     if after:
         url += f"?after={after}"
 

@@ -12,7 +12,7 @@ def number_of_subscribers(subreddit):
     # Send a GET request to the API endpoint
     response = requests.get(url, headers=headers, allow_redirects=False)
 
-    # Check if the request was successful and the response is valid JSON
+    # Check if the reques was successful and the response is valid JSON
     if response.status_code == 200:
         data = response.json()
         return data["data"]["subscribers"]
